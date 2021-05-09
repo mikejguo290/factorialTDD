@@ -1,9 +1,11 @@
 const Calculate = {
   factorial(inputNumber){
-    let product=1;
-    for(let i=1; i<inputNumber+1; i++){
-      product*=i;
-    }
+    let numberArray=Array.from(Array(inputNumber).keys()) // create an array of length inputNumber from the keys of the iterable Array(inputNumber)'s index
+    numberArray.shift() // removes the first element, which is 0
+    numberArray.push(inputNumber) // adds inputNumber to the end as it used to end and inputNumber-1
+    const product =numberArray.reduce((aggregate, currentVal)=>{
+      return aggregate*currentVal;
+    });
     return product
   }
 }
