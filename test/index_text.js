@@ -9,8 +9,8 @@ describe('Calculate', () => {
       //Exercise
       const result=Calculate.factorial(5);
       //Verify
-      assert.strictEqual(result, expectedResult)
-    })
+      assert.strictEqual(result, expectedResult);
+    });
     it('outputs 6 when given 3', ()=>{
       //Setup
       const expectedResult=6;
@@ -18,6 +18,14 @@ describe('Calculate', () => {
       const result=Calculate.factorial(3);
       //Verify
       assert.strictEqual(result, expectedResult);
-    })
+    });
+    it('outputs 1 when given 0', ()=>{
+      //Setup
+      const expectedResult=1;
+      //Exercise
+      const result=Calculate.factorial(0);
+      //Verify
+      assert.strictEqual(result, expectedResult);
+    });
   });
 });
