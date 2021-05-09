@@ -11,5 +11,13 @@ describe('Calculate', () => {
       //Verify
       assert.strictEqual(result, expectedResult)
     })
+    it('outputs 6 when given 3', ()=>{
+      //Setup
+      const expectedResult=6;
+      //Exercise
+      const result=Calculate.factorial(3);
+      //Verify
+      assert.strictEqual(result, expectedResult);
+    })
   });
 });
